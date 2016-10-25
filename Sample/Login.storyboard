@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MgZ-Lr-3Rh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="Gu1-ab-Dwv">
+            <objects>
+                <viewController id="MgZ-Lr-3Rh" customClass="LoginController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yQ5-Ol-2sk"/>
+                        <viewControllerLayoutGuide type="bottom" id="i9Z-aK-zJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTs-5g-qkI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザ名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAW-0o-4ej">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AQo-p4-ql7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-zK-Zyf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eS1-gu-zS9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-jV-8lE">
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.22352941179999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ceC-H0-Lhu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doLoginWithSender:" destination="MgZ-Lr-3Rh" eventType="touchUpInside" id="1Wq-wd-AKd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hAW-0o-4ej" secondAttribute="trailing" constant="50" id="6Cl-7p-FJ3"/>
+                            <constraint firstItem="ohd-zK-Zyf" firstAttribute="top" secondItem="hAW-0o-4ej" secondAttribute="bottom" constant="20" id="AAi-5x-ff0"/>
+                            <constraint firstItem="jLR-jV-8lE" firstAttribute="top" secondItem="ohd-zK-Zyf" secondAttribute="bottom" constant="20" id="AgL-df-2a9"/>
+                            <constraint firstAttribute="trailing" secondItem="ohd-zK-Zyf" secondAttribute="trailing" constant="50" id="Nwc-ge-gdL"/>
+                            <constraint firstAttribute="trailing" secondItem="jLR-jV-8lE" secondAttribute="trailing" constant="50" id="Pb8-jt-u7n"/>
+                            <constraint firstItem="jLR-jV-8lE" firstAttribute="leading" secondItem="UTs-5g-qkI" secondAttribute="leading" constant="50" id="Tvt-ZK-Heu"/>
+                            <constraint firstItem="hAW-0o-4ej" firstAttribute="leading" secondItem="UTs-5g-qkI" secondAttribute="leading" constant="50" id="YlW-ne-hPZ"/>
+                            <constraint firstItem="hAW-0o-4ej" firstAttribute="top" secondItem="yQ5-Ol-2sk" secondAttribute="bottom" constant="160" id="dnb-t7-Jb6"/>
+                            <constraint firstItem="ohd-zK-Zyf" firstAttribute="leading" secondItem="UTs-5g-qkI" secondAttribute="leading" constant="50" id="faM-WN-WSV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="jLR-jV-8lE" id="WsV-Kc-v7r"/>
+                        <outlet property="password" destination="ohd-zK-Zyf" id="S6y-JI-nxv"/>
+                        <outlet property="userName" destination="hAW-0o-4ej" id="gkL-5Q-XNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTC-1b-jfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.19999999999999" y="-235.23238380809596"/>
+        </scene>
+    </scenes>
+</document>
